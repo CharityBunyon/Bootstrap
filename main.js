@@ -77,3 +77,26 @@ cardBuilder(pies); //need an array of pies
 
 
 
+const buttonClick = (e) => {
+    const instructorName = e.target.id;
+    const selectedPie = [];
+    for (let i = 0; i < pies.length; i++){
+        const pie = pies[i];
+        if (pies[i].instructor === instructorName) {
+            selectedPie.push(pie);
+        }
+    }
+
+//should filter the pies based on the button that you clicked--- I am looking for my array
+cardBuilder(selectedPie);
+}
+
+
+
+document.getElementById('zoe').addEventListener('click', buttonClick);
+document.getElementById('callan').addEventListener('click', buttonClick);
+document.getElementById('michael').addEventListener('click', buttonClick);
+    
+    
+
+    
